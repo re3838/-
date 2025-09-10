@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>私の編み物</title>
   <style>
-    /* 全体のスタイルリセットと基本設定 */
     body, html {
       margin: 0;
       padding: 0;
@@ -13,31 +12,55 @@
       font-family: Arial, sans-serif;
       box-sizing: border-box;
     }
-    /* headerのスタイル */
+
     header {
-      background-color: #D7EEFF; /* 変更 */
+      background-color: #D7EEFF;
       color: white;
       padding: 20px;
       text-align: center;
       font-size: 1.8em;
     }
-    /* mainのスタイル */
+
     main {
       padding: 20px;
-      padding-bottom: 80px; /* footerの分の余白を確保 */
-      color: #111111; /* 追加 */
+      padding-bottom: 100px;
+      color: #111111;
     }
+
     main h2 {
       color: #333;
       margin-top: 40px;
     }
-    /* footerの固定 */
+
+    .image-row {
+      display: flex;
+      gap: 20px;
+      margin-bottom: 30px;
+    }
+
+    .image-item {
+      text-align: center;
+      flex: 1;
+    }
+
+    .image-item p {
+      margin: 10px 0;
+    }
+
+    .image-item img {
+      max-width: 100%;
+      height: auto;
+      max-width: 200px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
     footer {
       position: fixed;
       bottom: 0;
       left: 0;
       width: 100%;
-      background-color: #A4C6FF; /* 変更 */
+      background-color: #A4C6FF;
       color: white;
       padding: 15px 20px;
       display: flex;
@@ -45,13 +68,14 @@
       align-items: center;
       font-size: 0.9em;
     }
-    /* ソーシャルメディアリンク */
+
     footer a {
-      color: #FFFFFF	;
+      color: #FFFFFF;
       margin-left: 15px;
       text-decoration: none;
       font-weight: bold;
     }
+
     footer a:hover {
       text-decoration: underline;
     }
@@ -64,12 +88,22 @@
 
   <main>
     <h2>最近作ったもの</h2>
-    <p>クマのぬいぐるみ</p>
-     <img src="https://github.com/re3838/-/blob/main/bear.jpg?raw=true" alt="サンプル">
-　　<p>お花のかばん</p>
-     <img src="https://github.com/re3838/-/blob/main/flower.webp?raw=true" alt="サンプル">
+
+    <!-- クマのぬいぐるみ + お花のかばん（横並び） -->
+    <div class="image-row">
+      <div class="image-item">
+        <p>クマのぬいぐるみ</p>
+        <img src="https://github.com/re3838/-/blob/main/bear.jpg?raw=true" alt="クマのぬいぐるみ">
+      </div>
+      <div class="image-item">
+        <p>お花のかばん</p>
+        <img src="https://github.com/re3838/-/blob/main/flower.webp?raw=true" alt="お花のかばん">
+      </div>
+    </div>
 
     <h2>次に作りたいもの</h2>
+
+    <!-- てぶくろ + イヤホンケース（横並び） -->
     <div class="image-row">
       <div class="image-item">
         <p>てぶくろ</p>
@@ -81,6 +115,7 @@
       </div>
     </div>
   </main>
+
   <footer>
     <div>お問い合わせ: sample@example.com</div>
     <div>
@@ -91,11 +126,3 @@
   </footer>
 </body>
 </html>
-
-
-
-
-
-
-
-
